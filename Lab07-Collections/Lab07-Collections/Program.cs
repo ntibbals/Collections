@@ -8,6 +8,16 @@ namespace Lab07_Collections
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Container<string> myDeck = new Container<string>();
+
+            myDeck.Add("King");
+            myDeck.Add("Queen");
+            myDeck.Add("Jack");
+
+            foreach(string card in myDeck)
+            {
+                Console.WriteLine(card);
+            }
         }
     }
 }
