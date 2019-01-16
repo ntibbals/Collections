@@ -8,16 +8,47 @@ namespace Lab07_Collections
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            Container<string> myDeck = new Container<string>();
-
-            myDeck.Add("King");
-            myDeck.Add("Queen");
-            myDeck.Add("Jack");
-
-            foreach(string card in myDeck)
-            {
-                Console.WriteLine(card);
-            }
+            CreateDeck();
+            
         }
+
+        public static void CreateDeck()
+        {
+            Deck<Cards> myDeck = new Deck<Cards>();
+            Cards card1 = new Cards(Cards.Suits.Hearts, "A");
+            Cards card2 = new Cards(Cards.Suits.Hearts, "2");
+            Cards card3 = new Cards(Cards.Suits.Hearts, "3");
+            Cards card4 = new Cards(Cards.Suits.Hearts, "4");
+            Cards card5 = new Cards(Cards.Suits.Hearts, "5");
+            Cards card6 = new Cards(Cards.Suits.Hearts, "6");
+            Cards card7 = new Cards(Cards.Suits.Hearts, "7");
+            Cards card8 = new Cards(Cards.Suits.Hearts, "8");
+            Cards card9 = new Cards(Cards.Suits.Hearts, "9");
+            Cards card10 = new Cards(Cards.Suits.Hearts, "10");
+            Cards card11 = new Cards(Cards.Suits.Hearts, "J");
+            Cards card12 = new Cards(Cards.Suits.Hearts, "Q");
+            Cards card13 = new Cards(Cards.Suits.Hearts, "K");
+
+            myDeck.Add(card1);
+            myDeck.Add(card2);
+            myDeck.Add(card3);
+            myDeck.Add(card4);
+            myDeck.Add(card5);
+            myDeck.Add(card6);
+            myDeck.Add(card7);
+            myDeck.Add(card8);
+            myDeck.Add(card9);
+            myDeck.Add(card10);
+            myDeck.Add(card11);
+            myDeck.Add(card12);
+            myDeck.Add(card13);
+
+            foreach (Cards card in myDeck)
+            {
+                Console.WriteLine($"{card.Value} of {card.Suit}");
+            }
+            Console.ReadLine();
+        }
+
     }
 }
