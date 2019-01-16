@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Lab07_Collections.Classes
 {
-    public class Container<T> 
+    public class Container<T> : IEnumerable<T>
     {
 
         T[] cardDeck = new T[10];
@@ -19,6 +20,20 @@ namespace Lab07_Collections.Classes
 
             cardDeck[currentIndex] = card;
             currentIndex++;
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = 0; i < currentIndex; i++)
+            {
+                yield return cardDeck[i];
+
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }
