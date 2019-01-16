@@ -15,6 +15,7 @@ namespace Lab07_Collections
         public static void CreateDeck()
         {
             Deck<Cards> myDeck = new Deck<Cards>();
+            D
             Cards card1 = new Cards(Cards.Suits.Hearts, "A");
             Cards card2 = new Cards(Cards.Suits.Hearts, "2");
             Cards card3 = new Cards(Cards.Suits.Hearts, "3");
@@ -49,6 +50,7 @@ namespace Lab07_Collections
             }
             Console.ReadLine();
         }
+
 
     }
 }

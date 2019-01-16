@@ -5,13 +5,13 @@ using System.Text;
 
 namespace Lab07_Collections.Classes
 {
-    public class Deck<T, P1, P2> : IEnumerable<T>
+    public class Deck<T> : IEnumerable<T>, IEnumerable
     {
 
         T[] cardDeck = new T[10];
+        T[] PlayerOne = new T[5];
+        T[] PlayerTwo = new T[5];
 
-        P1[] PlayerOne = new P1[5];
-        P2[] PlayerTwo = new P2[5];
         int currentIndex = 0;
 
         public void Add(T card)
@@ -27,12 +27,15 @@ namespace Lab07_Collections.Classes
 
         public void Remove(T card)
         {
-            if (currentIndex < cardDeck.Length)
+            int counter = 0;
+            for (int i = 0; i < cardDeck.Length; i++)
             {
-                Array.Resize(ref cardDeck, cardDeck.Length - 1);
+                counter++;
+                if (cardDeck[i].Equals(card))
+                {
+
+                }
             }
-            cardDeck[currentIndex] != card;
-            currentIndex++;
 
         }
         public IEnumerator<T> GetEnumerator()
@@ -40,22 +43,6 @@ namespace Lab07_Collections.Classes
             for (int i = 0; i < currentIndex; i++)
             {
                 yield return cardDeck[i];
-
-            }
-        }
-        public IEnumerator<P1> GetEnumeratorP1()
-        {
-            for (int i = 0; i < currentIndex; i++)
-            {
-                yield return PlayerOne[i];
-
-            }
-        }
-        public IEnumerator<P2> GetEnumeratorP2()
-        {
-            for (int i = 0; i < currentIndex; i++)
-            {
-                yield return PlayerTwo[i];
 
             }
         }
