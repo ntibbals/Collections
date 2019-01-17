@@ -29,23 +29,19 @@ namespace Lab07_Collections.Classes
         public T[] Remove(T card)
         {
         
-            //int counter = 0;
-            for (int i = 0; i < cardDeck.Length; i++)
+            int counter = 0;
+            for (int i = 1; i < cardDeck.Length; i++)
             {
-                int index = 0;
-                //counter++;
+                counter++;
                 if (cardDeck[i].Equals(card))
                 {
-                    index = Array.IndexOf(cardDeck, card);
-                    T[] tempDeck = cardDeck.Where(element => element != index);
-                    Array.Copy(tempDeck, cardDeck, tempDeck.Length);
-                    return cardDeck;
+                    break;
                 }
             }
-           
-            
+            T[] tempDeck = cardDeck.Where((element, j) => j != counter).ToArray();
+            Array.Copy(tempDeck, cardDeck, tempDeck.Length);
+            return cardDeck;
 
-            return null;
         }
         public IEnumerator<T> GetEnumerator()
         {
