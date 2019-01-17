@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab07-Collections", "Lab07-Collections\Lab07-Collections.csproj", "{20342E0B-3754-4EC5-A406-D8CF9F3D412D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deck_TDD", "Deck_TDD\Deck_TDD.csproj", "{F38E62FC-6226-4A65-944B-EBD004024A8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{20342E0B-3754-4EC5-A406-D8CF9F3D412D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20342E0B-3754-4EC5-A406-D8CF9F3D412D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20342E0B-3754-4EC5-A406-D8CF9F3D412D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F38E62FC-6226-4A65-944B-EBD004024A8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F38E62FC-6226-4A65-944B-EBD004024A8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F38E62FC-6226-4A65-944B-EBD004024A8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F38E62FC-6226-4A65-944B-EBD004024A8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
