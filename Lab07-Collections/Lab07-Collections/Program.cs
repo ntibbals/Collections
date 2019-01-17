@@ -54,17 +54,23 @@ namespace Lab07_Collections
 
             Console.WriteLine("___________________________");
 
-            Console.WriteLine($"Removing {card12.Suit} {card12.Value}");
+            Console.WriteLine($"Removing face values: {card12.Suit} = {card13.Value} : {card12.Value} : {card11.Value} : {card1.Value} ");
 
-            Cards[] newDeck = myDeck.Remove(card13);
+            myDeck.Remove(card12);
+            myDeck.Remove(card13);
+            myDeck.Remove(card11);
+            myDeck.Remove(card1);
             //newDeck = myDeck.Remove(card12);
             //newDeck = myDeck.Remove(card11);
             //newDeck = myDeck.Remove(card1);
             Console.WriteLine($"Current count:{myDeck.Count()}");
-            //foreach (Cards card in newDeck)
-            //{
-            //    Console.WriteLine($"{card.Value} of {card.Suit}");
-            //}
+            foreach (Cards card in myDeck)
+            {
+                if (card != null)
+                {
+                    Console.WriteLine($"{card.Value} of {card.Suit}");
+                }
+            }
             Console.WriteLine("___________________________");
 
 
