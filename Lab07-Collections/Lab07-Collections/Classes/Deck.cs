@@ -33,7 +33,7 @@ namespace Lab07_Collections.Classes
 
         public T[] Remove(T card)
         {
-        
+            count--;
             int counter = 0;
             for (int i = 1; i < cardDeck.Length; i++)
             {
