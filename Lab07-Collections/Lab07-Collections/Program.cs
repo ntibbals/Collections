@@ -49,6 +49,8 @@ namespace Lab07_Collections
             }
             Console.WriteLine("___________________________");
             myDeck.Remove(card12);
+
+            Console.WriteLine($"Current count:{myDeck.Count()}");
             foreach (Cards card in myDeck)
             {
                 Console.WriteLine($"{card.Value} of {card.Suit}");

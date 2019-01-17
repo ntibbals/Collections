@@ -14,7 +14,11 @@ namespace Lab07_Collections.Classes
         T[] PlayerTwo = new T[5];
 
         int currentIndex = 0;
-
+        int count = 0;
+        public int Count()
+        {
+            return count;
+        }
         public void Add(T card)
         {
             if (currentIndex > cardDeck.Length -1)
@@ -24,6 +28,7 @@ namespace Lab07_Collections.Classes
 
             cardDeck[currentIndex] = card;
             currentIndex++;
+            count++;
         }
 
         public T[] Remove(T card)
@@ -41,8 +46,8 @@ namespace Lab07_Collections.Classes
             T[] tempDeck = cardDeck.Where((element, j) => j != counter).ToArray();
             Array.Copy(tempDeck, cardDeck, tempDeck.Length);
             return cardDeck;
-
         }
+
         public IEnumerator<T> GetEnumerator()
         {
             for (int i = 0; i < currentIndex; i++)
