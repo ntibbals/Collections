@@ -20,13 +20,13 @@
 - Upon page load, ten sample cards are displayed with their card value and suit. The application will then create another deck to deal to Player One, Player Two and the Dealer. Each player recieves five cards and the remaining cards stay in the dealers hand.
 
 # Creating Deck
-![SCREENSHOT]()
+![SCREENSHOT](https://github.com/ntibbals/Lab07-Collections/blob/master/image1.PNG)
 
 # Removing Cards
-![SCREENSHOT]()
+![SCREENSHOT](https://github.com/ntibbals/Lab07-Collections/blob/master/image2.PNG)
 
 # Dealing
-![SCREENSHOT]()
+![SCREENSHOT](https://github.com/ntibbals/Lab07-Collections/blob/master/image2.PNG)
 
 
 # Resources
