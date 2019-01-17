@@ -14,6 +14,9 @@ namespace Lab07_Collections
             
         }
 
+        /// <summary>
+        /// Instantiates Initial example deck
+        /// </summary>
         public static void CreateDeck()
         {
             Deck<Cards> myDeck = new Deck<Cards>();
@@ -59,9 +62,6 @@ namespace Lab07_Collections
             myDeck.Remove(card13);
             myDeck.Remove(card11);
             myDeck.Remove(card1);
-            //newDeck = myDeck.Remove(card12);
-            //newDeck = myDeck.Remove(card11);
-            //newDeck = myDeck.Remove(card1);
             Console.WriteLine($"Current count:{myDeck.Count()}");
             foreach (Cards card in myDeck)
             {
@@ -73,6 +73,9 @@ namespace Lab07_Collections
             Console.WriteLine("_______________________________________________________________________________");
         }
 
+        /// <summary>
+        /// Deals cards
+        /// </summary>
         public static void Deal()
         {
 

@@ -14,6 +14,11 @@ namespace Lab07_Collections.Classes
         public enum Suits { Hearts, Spades, Diamonds, Clubs }
       
 
+        /// <summary>
+        /// Constructor for Cards object
+        /// </summary>
+        /// <param name="suit">suit</param>
+        /// <param name="val">value of card</param>
         public Cards(Suits suit, string val)
         {
             Value = val;
