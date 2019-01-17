@@ -17,7 +17,7 @@ namespace Lab07_Collections.Classes
         public Cards(Suits suit, string val)
         {
             Value = val;
-            Suit = Suit;
+            Suit = suit;
 
         }
 

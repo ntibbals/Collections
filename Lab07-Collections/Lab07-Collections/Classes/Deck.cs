@@ -33,20 +33,24 @@ namespace Lab07_Collections.Classes
         //int index = Array.IndexOf(cardDeck, card);
         public T[] Remove(T card)
         {
-            count--;
-            for (int i = 0; i < cardDeck.Length; i++)
+
+            if (cardDeck.Contains(card))
             {
-                if (cardDeck[i].Equals(card))
+                count--;
+                for (int i = 0; i < cardDeck.Length; i++)
                 {
-                    int index = Array.IndexOf(cardDeck, card);
-                    T[] tempDeck = cardDeck.Where((element, j) => j != index).ToArray();
-                    Array.Copy(tempDeck, cardDeck, tempDeck.Length);
-                    return cardDeck;
+                    if (cardDeck[i].Equals(card))
+                    {
+                        int index = Array.IndexOf(cardDeck, card);
+                        T[] tempDeck = cardDeck.Where((element, j) => j != index).ToArray();
+                        Array.Copy(tempDeck, cardDeck, tempDeck.Length);
+                        return cardDeck;
+                    }
                 }
             }
-            
-            return null;
 
+                return cardDeck;
+       
         }
 
         public IEnumerator<T> GetEnumerator()
