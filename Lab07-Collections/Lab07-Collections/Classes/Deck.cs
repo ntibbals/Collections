@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace Lab07_Collections.Classes
 {
@@ -25,18 +26,26 @@ namespace Lab07_Collections.Classes
             currentIndex++;
         }
 
-        public void Remove(T card)
+        public T[] Remove(T card)
         {
-            int counter = 0;
+        
+            //int counter = 0;
             for (int i = 0; i < cardDeck.Length; i++)
             {
-                counter++;
+                int index = 0;
+                //counter++;
                 if (cardDeck[i].Equals(card))
                 {
-
+                    index = Array.IndexOf(cardDeck, card);
+                    T[] tempDeck = cardDeck.Where(element => element != index);
+                    Array.Copy(tempDeck, cardDeck, tempDeck.Length);
+                    return cardDeck;
                 }
             }
+           
+            
 
+            return null;
         }
         public IEnumerator<T> GetEnumerator()
         {

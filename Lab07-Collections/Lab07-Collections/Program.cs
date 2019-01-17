@@ -15,7 +15,6 @@ namespace Lab07_Collections
         public static void CreateDeck()
         {
             Deck<Cards> myDeck = new Deck<Cards>();
-            D
             Cards card1 = new Cards(Cards.Suits.Hearts, "A");
             Cards card2 = new Cards(Cards.Suits.Hearts, "2");
             Cards card3 = new Cards(Cards.Suits.Hearts, "3");
@@ -44,6 +43,12 @@ namespace Lab07_Collections
             myDeck.Add(card12);
             myDeck.Add(card13);
 
+            foreach (Cards card in myDeck)
+            {
+                Console.WriteLine($"{card.Value} of {card.Suit}");
+            }
+            Console.WriteLine("___________________________");
+            myDeck.Remove(card12);
             foreach (Cards card in myDeck)
             {
                 Console.WriteLine($"{card.Value} of {card.Suit}");
