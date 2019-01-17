@@ -7,7 +7,7 @@ namespace Lab07_Collections
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome to the Casino!");
             CreateDeck();
             Deal();
             Console.ReadLine();
