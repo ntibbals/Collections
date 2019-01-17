@@ -3,7 +3,7 @@ using Lab07_Collections.Classes;
 
 namespace Lab07_Collections
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
