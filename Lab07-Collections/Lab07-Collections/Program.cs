@@ -9,6 +9,7 @@ namespace Lab07_Collections
         {
             Console.WriteLine("Hello World!");
             CreateDeck();
+            Console.ReadLine();
             
         }
 
@@ -48,14 +49,27 @@ namespace Lab07_Collections
                 Console.WriteLine($"{card.Value} of {card.Suit}");
             }
             Console.WriteLine("___________________________");
-            myDeck.Remove(card12);
 
             Console.WriteLine($"Current count:{myDeck.Count()}");
-            foreach (Cards card in myDeck)
-            {
-                Console.WriteLine($"{card.Value} of {card.Suit}");
-            }
-            Console.ReadLine();
+
+            Console.WriteLine("___________________________");
+
+            Console.WriteLine($"Removing {card12.Suit} {card12.Value}");
+
+            Cards[] newDeck = myDeck.Remove(card13);
+            //newDeck = myDeck.Remove(card12);
+            //newDeck = myDeck.Remove(card11);
+            //newDeck = myDeck.Remove(card1);
+            Console.WriteLine($"Current count:{myDeck.Count()}");
+            //foreach (Cards card in newDeck)
+            //{
+            //    Console.WriteLine($"{card.Value} of {card.Suit}");
+            //}
+            Console.WriteLine("___________________________");
+
+
+
+
         }
 
 
